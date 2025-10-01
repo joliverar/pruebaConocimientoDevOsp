@@ -25,38 +25,38 @@ public class GestorDeTareas {
             System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
+            scanner.nextLine();
 
             switch (opcion) {
-                case 1:
+                case 1 -> {
                     System.out.print("Ingrese la descripción de la tarea: ");
                     String descripcion = scanner.nextLine();
                     gestor.agregarTarea(descripcion);
-                    break;
-                case 2:
+                    break;}
+                case 2 -> {
                     gestor.listarTareas();
-                    break;
-                case 3:
+                    break;}
+                case 3  -> {
                     gestor.listarTareas();
                     System.out.print("Ingrese el número de la tarea a completar: ");
                     int completar = scanner.nextInt() - 1;
                     gestor.marcarComoCompletada(completar);
-                    break;
-                case 4:
+                    break; }
+                case 4  -> {
                     gestor.listarTareas();
                     System.out.print("Ingrese el número de la tarea a eliminar: ");
                     int eliminar = scanner.nextInt() - 1;
                     gestor.eliminarTarea(eliminar);
-                    break;
-                case 5:
+                    break; }
+                case 5  -> {
                     System.out.println("¡Hasta luego!");
-                    break;
-                default:
+                    break; }
+                default ->
                     System.out.println("Opción inválida.");
             }
         } while (opcion != 5);
 
-        scanner.close();
+      
     }
 }
 
