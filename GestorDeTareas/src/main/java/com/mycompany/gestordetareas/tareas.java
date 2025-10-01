@@ -10,11 +10,11 @@ package com.mycompany.gestordetareas;
  */
 public class tareas {
     
-    private String descripcion;
+    private String nombre;
     private boolean completada;
 
-    public tareas(String descripcion) {
-        this.descripcion = descripcion;
+    public tareas(String nombre) {
+        this.nombre = nombre;
         this.completada = false;
     }
 
@@ -27,11 +27,11 @@ public class tareas {
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return nombre;
     }
 
     @Override
     public String toString() {
-        return (completada ? "si " : "no ") + descripcion;
+        return (completada ? "si " : "no ") + nombre;
     }
 }
