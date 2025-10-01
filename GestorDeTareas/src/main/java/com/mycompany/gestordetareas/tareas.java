@@ -32,6 +32,6 @@ public class tareas {
 
     @Override
     public String toString() {
-        return (completada ? "[✔] " : "[ ] ") + descripcion;
+        return (completada ? "si " : "no ") + descripcion;
     }
 }
